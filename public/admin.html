@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <title>Yodlr Admin Page</title>
+</head>
+<nav>
+  <a href="/index.html" id="logo">Yodlr</a> |
+  <a href="/signup.html">Registration</a> |
+  <a href="/admin.html">Admin Page</a>
+  <a href="/index.html" id="logout" class="hidden">Admin Log Out</a>
+</nav>
+
+<body>
+  <div class="text-center">
+    <form id="admin-form" class="hidden">
+      <p>Go <a href="index.html#admin-creds">here</a> in order to find the admin credentials to gain access to admin privileges.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col right-side">User: </div>
+          <div class="col left-side"><input type="text" id="admin"></div>
+        </div>
+        <div class="row">
+          <div class="col right-side">Password:</div>
+          <div class="col left-side"><input type="password" id="current-password"></div>
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+    <form id="search-form" class="hidden">
+      <input type="text" id="search">
+      <button type="submit" class="btn btn-info">Search</button>
+    </form>
+    <table id="users" class="hidden">
+      <tr id="headers">
+        <th class="category left-side" id="lastName"><a class="btn btn-primary">Last Name</a><i class="fas fa-chevron-up"></i></th>
+        <th class="category left-side" id="firstName"><a class="btn btn-secondary">First Name</a></th>
+        <th class="category left-side" id="email"><a class="btn btn-secondary">Email</a></th>
+        <th class="category right-side" id="state"><a class="btn btn-secondary">Status</a></th>
+      </tr>
+    </table>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/9b6b3175df.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="js/constants.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/admin.js"></script>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/admin.css" rel="stylesheet">
+</html>

@@ -1,0 +1,53 @@
+td {
+  width: 20%;
+}
+
+nav {
+  background-color: darkslategray;
+}
+
+.hidden {
+visibility: hidden;
+}
+
+.right-side {
+  text-align: right;
+}
+
+.left-side {
+  text-align: left;
+}
+
+.right {
+  color:green;
+}
+
+.wrong {
+  color: red;
+}
+
+.done {
+  pointer-events: none;
+}
+
+div.side-side {
+  display: flex;
+}
+
+div.left {
+  width: 300px;
+}
+
+div.right {
+  flex-grow: 1;
+}
+
+div.fit {
+  margin: 25px;
+}
+
+#logo {
+  font-family: cursive;
+  font-size: 50px;
+  text-decoration: none;
+}

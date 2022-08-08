@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <title>Yodlr Design Challenge</title>
+</head>
+<nav>
+  <a href="/index.html" id="logo">Yodlr</a> |
+  <a href="/signup.html">Registration</a> |
+  <a href="/admin.html">Admin Page</a>
+  <a href="/index.html" id="logout" class="hidden">Admin Log Out</a>
+</nav>
+
+<body>
+  <h1 class="text-center">Yodlr Design Challenge</h1>
+  <div class="side-side fit">
+    <div class="left">
+      <a href='https://www.linkedin.com/in/cheng-melvin/'>
+        <img
+          src='https://media-exp1.licdn.com/dms/image/C4D03AQG-eg-XVAsyzQ/profile-displayphoto-shrink_800_800/0/1649260307916?e=1665619200&v=beta&t=454bm9vyUU1AAjQOmbVa-VgCuOwfMIh9rf3s3bBPlhk'>
+      </a>
+    </div>
+    <div class="left-side fit">
+      <p>Hello and welcome to my Yodlr webpage. This was created as of an example of my design skills.
+        This frontend site utilizes jQuery and Bootstrap while the backend uses NodeJS. The backend was provided by
+        others so review the README.md to start the backend services.</p>
+      <p>If you'd like to see my LinkedIn profile, click my image.</p>
+      <p>Read on to understand the website and enjoy!</p>
+    </div>
+  </div>
+  <div class="fit">
+    <h3><u>Navigation</u></h3>
+    <h5>Yodlr Logo (Home Page)</h5>
+    <p>This is the home page! This links back to this page.</p>
+    <h5>Registration Page</h5>
+    <p>Anybody can register to be a new user. Duplicates are not verified so be careful when entering
+      this information. This would typically be handled by the backend and return error if any duplicates are found.
+      Click <a href="#reg-page">here</a> to learn more of this page.</p>
+    <h5>Admin Page</h5>
+    <p>Here are the full admin right to control this site. You must login with the credentials <a
+        href="#admin-creds">here</a>. A list of all users is shown. You can sort and even search through the users,
+      helpful when users' list is extensive. Click <a href="#admin-page">here</a> to know how to use these features or
+      give it a go yourself.</p>
+    <h5>Admin Log Out</h5>
+    <p>Log out of admin user. This link will only show up if the admin is logged in.</p>
+    <h3><a id="reg-page"><u>Registration Page</u></a></h3>
+    <h5>Registration Form</h5>
+    <table class="example">
+      <tr>
+        <td class="right-side">First Name: </td>
+        <td class="left-side"><input type="text"></td>
+      </tr>
+      <tr>
+        <td class="right-side">Last Name: </td>
+        <td class="left-side"><input type="text"></td>
+      </tr>
+      <tr>
+        <td class="right-side">Email: </td>
+        <td class="left-side"><input type="email"></td>
+      </tr>
+    </table>
+    <p>Given a first name, last name, and email, a new user is created with the status of "Pending". Only an admin can
+      activate each user on the admin page. All fields must be filled out in order to create a new user. The first name
+      and last name must be a text and email must be a valid email.
+    </p>
+    <h3><a id="admin-page"><u>Admin Page</u></a></h3>
+    <h5>Admin Login Form</h5>
+    <table>
+      <tr>
+        <td class="right-side">User: </td>
+        <td class="left-side"><input type="text"></td>
+      </tr>
+      <tr>
+        <td class="right-side">Password:</td>
+        <td class="left-side"><input type="password"></td>
+      </tr>
+    </table>
+    <p>Login with the credentials below: </p>
+    <p><a id="admin-creds"></a>User: <strong><em>Melvin</em></strong><br>Password: <strong><em>1337</em></strong></p>
+    <p>These credentials are hard coded into the site but could typically be handled by the backend so that there can be
+      multiple admins and can be verified from the backend.</p>
+    <h5>Search Form</h5>
+    <table>
+      <tr>
+        <td class="right-side"><button class="btn btn-info done">Search</button></td>
+        <td class="left-side"><input type="text"></td>
+      </tr>
+    </table>
+    <p>Given a search text, the form searches all users which contain the search text in last and first names only and
+      is case-insensitive.</p>
+    <h5>Users List</h5>
+    <p>All users are shown in a list here. If using the search form, only list users which are valid searches. </p>
+    <em>Categories</em>
+    <p>Default sorting is by ascending last name however this can be changed to sort all users by a different category
+      by simply selecting a different category header. The categories are: </p>
+    <table>
+      <tr>
+        <td><a class="btn btn-secondary done">Last Name</a></td>
+        <td><a class="btn btn-secondary done">First Name</a></td>
+        <td><a class="btn btn-secondary done">Email</a></td>
+        <td><a class="btn btn-secondary done">Status</a></td>
+      </tr>
+    </table><br>
+    <em>Sorting</em>
+    <p>The current sorting criteria is shown as a BLUE button with a chevron next to the category header shown here with
+      <em>ascending</em> order:
+    </p>
+    <p><a class="btn btn-primary done">First Name</a><i class="fas fa-chevron-up"></i></p>
+    <p>If you desire to change to <em>descending</em> order, select the current category again and the chevron will
+      point down shown here:</p>
+    <p><a class="btn btn-primary done">First Name</a><i class="fas fa-chevron-down"></i></p>
+    <em>Status</em>
+    <p>The user status is either "Active" or "Pending". A "Pending" button is next to each user to change their status
+      to "Active" but an "Active" status can not be changed back to "Pending" status.</p>
+    <table class="text-center">
+      <tr>
+        <th><i class="fas fa-check right"></i></th>
+        <th><i class="fas fa-times wrong"></i></th>
+      </tr>
+      <td>
+        <button type="button" class="btn btn-outline-warning done">Pending</button>
+        <i class="fas fa-arrow-right"></i>
+        <button type="button" class="btn btn-success done">Active</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-success done">Active</button>
+        <i class="fas fa-arrow-right"></i>
+        <button type="button" class="btn btn-outline-warning done">Pending</button>
+      </td>
+    </table>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/9b6b3175df.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="js/constants.js"></script>
+<script src="js/nav.js"></script>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+
+</html>
